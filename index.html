@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>tester</title>
+      <link rel="stylesheet" type="text/css" href="stylesheet.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script>
+    </head>
+    <body>
+      <header>給料計算</header>
+
+      <div id="main">
+        <div id="option">
+          <div id="salary">
+            <p>時給</p>
+            <input id="salary-input" type="text" value="950" maxlength="4"><span>円</span>
+          </div>
+          <div id="rest-time">
+            <p>昼休み</p>
+            <div class="time-select">
+              <div class="start">
+                <select id="rest-time-start-hour">
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option selected>12</option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                </select><span>時</span>
+                <select id="rest-time-start-minute">
+                  <option selected>00</option>
+                  <option>15</option>
+                  <option>30</option>
+                  <option>45</option>
+                </select><span>分</span>
+              </div>
+              <div class="mid">～</div>
+              <div class="finish">
+                <select id="rest-time-finish-hour">
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                  <option selected>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                </select><span>時</span>
+                <select id="rest-time-finish-minute">
+                  <option selected>00</option>
+                  <option>15</option>
+                  <option>30</option>
+                  <option>45</option>
+                </select><span>分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="calc">
+          <p>始業時刻と終業時刻</p>
+          <div class="time-select">
+            <div class="start">
+              <select id="calc-start-hour">
+                <option selected>0</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+              </select><span>時</span>
+              <select id="calc-start-minute">
+                <option selected>00</option>
+                <option>15</option>
+                <option>30</option>
+                <option>45</option>
+              </select><span>分</span>
+            </div>
+            <div class="mid">～</div>
+            <div class="finish">
+              <select id="calc-finish-hour">
+                <option selected>0</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+              </select><span>時</span>
+              <select id="calc-finish-minute">
+                <option selected>00</option>
+                <option>15</option>
+                <option>30</option>
+                <option>45</option>
+              </select><span>分</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="calc-btn" ontouchstart="">計算する</div>
+        <div id="arrow">
+          <i class="fas fa-long-arrow-alt-down"></i>
+        </div>
+
+        <div id="result">
+          <div>
+            <p>時間数</p>
+            <input id="time-count" type="text" readonly>
+          </div>
+          <div>
+            <p>給料</p>
+            <input id="salary-count" type="text" readonly><span>円</span>
+          </div>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+    </body>
+ </html>
